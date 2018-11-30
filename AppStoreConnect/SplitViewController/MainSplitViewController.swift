@@ -7,19 +7,25 @@
 //
 
 import Cocoa
+import AppKit
 
 final class MainSplitViewController: NSSplitViewController {
 
     private var menuViewController: MenuViewController!
-    private var appDetailViewController: AppDetailViewController!
+    private var detailTabBarController: NSTabViewController!
+
+    private var appDetailCoordinator: AppDetailCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         menuViewController = (children[0] as! MenuViewController)
-        appDetailViewController = (children[1] as! NSTabViewController).children.compactMap { $0 as? AppDetailViewController }.first!
+        detailTabBarController = (children[1] as! NSTabViewController)
+
         menuViewController.didSelectApp = { [weak self] app in
             print("Did select app \(String(describing: app.attributes?.name))")
-            self?.appDetailViewController.viewModel = AppDetailViewModel(app: app)
+            self?.appDetailCoordinator = AppDetailCoordinator(app: app)
+            self?.appDetailCoordinator?.start(tabBarController: self!.detailTabBarController)
+            
         }
 
         splitView.setPosition(250, ofDividerAt: 0)
