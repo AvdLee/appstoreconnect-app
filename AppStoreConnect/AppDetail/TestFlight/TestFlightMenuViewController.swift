@@ -10,9 +10,16 @@ import Cocoa
 
 final class TestFlightMenuViewController: NSViewController {
 
+    var viewModel: TestFlightMenuViewModel? {
+        didSet {
+
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+
+        view.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
 }

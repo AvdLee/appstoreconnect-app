@@ -24,19 +24,14 @@ final class MenuViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.widthAnchor.constraint(equalToConstant: 250).isActive = true
+
         provider.request(.apps()) { [weak self] (result) in
             DispatchQueue.main.async {
                 self?.apps = result.value?.data.sortByName()
             }
         }
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
 
 }
 

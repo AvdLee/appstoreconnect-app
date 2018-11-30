@@ -28,7 +28,10 @@ final class MainSplitViewController: NSSplitViewController {
             
         }
 
-        splitView.setPosition(250, ofDividerAt: 0)
+    }
+
+    override func splitView(_ splitView: NSSplitView, effectiveRect proposedEffectiveRect: NSRect, forDrawnRect drawnRect: NSRect, ofDividerAt dividerIndex: Int) -> NSRect {
+        return NSZeroRect
     }
 
 }

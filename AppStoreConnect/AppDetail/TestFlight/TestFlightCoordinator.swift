@@ -20,6 +20,8 @@ final class TestFlightCoordinator {
 
     func start(tabBarController: NSSplitViewController) {
         let testFlightMenuViewController = tabBarController.children.first as! TestFlightMenuViewController
+        let viewModel = TestFlightMenuViewModel(app: app)
+        testFlightMenuViewController.viewModel = viewModel
     }
 
 }

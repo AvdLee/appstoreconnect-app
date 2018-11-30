@@ -877,7 +877,7 @@
         <!--TestFlight-->
         <scene sceneID="PXz-VB-le8">
             <objects>
-                <splitViewController title="TestFlight" id="ZaH-R7-Rul" sceneMemberID="viewController">
+                <splitViewController title="TestFlight" id="ZaH-R7-Rul" customClass="TestFlightSplitViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="txY-Ge-GW8"/>
                         <splitViewItem id="Bcn-IS-N7N"/>
