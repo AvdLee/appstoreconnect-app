@@ -11,21 +11,20 @@ import AppStoreConnect_Swift_SDK
 
 final class MenuViewController: NSViewController {
 
-    @IBOutlet weak var tableView: NSTableView!
-    private var provider = APIProvider(configuration: APIConfiguration.testConfiguration) {
-        didSet {
-            // TODO: fetch data
-            tableView.reloadData()
-        }
-    }
+    @IBOutlet private weak var tableView: NSTableView!
+    private let provider = APIProvider(configuration: APIConfiguration.testConfiguration)
     private var apps: [App]? {
         didSet {
             tableView.reloadData()
         }
     }
 
+    var didSelectApp: ((_ app: App) -> Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.widthAnchor.constraint(equalToConstant: 200).isActive = true
 
         provider.request(.apps()) { [weak self] (result) in
             DispatchQueue.main.async {
@@ -33,13 +32,6 @@ final class MenuViewController: NSViewController {
             }
         }
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
 
 }
 
@@ -55,6 +47,12 @@ extension MenuViewController: NSTableViewDelegate {
         result = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as! AppMenuTableCellView
         result.appNameLabel.stringValue = apps?[row].attributes?.name ?? "Unknown name"
         return result
+    }
+
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        let table = notification.object as! NSTableView
+        guard let app = apps?[table.selectedRow] else { return }
+        didSelectApp?(app)
     }
 }
 

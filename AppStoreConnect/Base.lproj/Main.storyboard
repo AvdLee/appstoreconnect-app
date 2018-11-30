@@ -694,7 +694,7 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="eo4-IL-4OG" kind="relationship" relationship="window.shadowedContentViewController" id="aA2-ui-1aq"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -801,48 +801,71 @@
                 </viewController>
                 <customObject id="0Zd-nI-Nc3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="740"/>
+            <point key="canvasLocation" x="1308" y="646"/>
+        </scene>
+        <!--Main Split View Controller-->
+        <scene sceneID="L4x-lN-lue">
+            <objects>
+                <splitViewController id="eo4-IL-4OG" customClass="MainSplitViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="90t-he-dY1"/>
+                        <splitViewItem id="h7r-ho-9Jc"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="Y7X-ng-sXX">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </splitView>
+                    <connections>
+                        <outlet property="splitView" destination="Y7X-ng-sXX" id="WdH-Cy-HtF"/>
+                        <segue destination="Ma7-Ei-34m" kind="relationship" relationship="splitItems" id="T7Q-3y-4qb"/>
+                        <segue destination="GQm-HZ-cuu" kind="relationship" relationship="splitItems" id="Xus-0V-7VG"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="50e-nD-913" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="777"/>
         </scene>
         <!--Menu View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <scene sceneID="93O-R0-JUM">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="MenuViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="878" height="440"/>
+                <customObject id="1qn-pg-M77" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController id="Ma7-Ei-34m" customClass="MenuViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="28Q-L5-l44">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyS-VJ-Tct">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="440"/>
-                                <clipView key="contentView" id="7py-fO-alj">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="440"/>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGe-HN-DzC">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <clipView key="contentView" id="lvU-e4-E0J">
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="32" headerView="Zd7-av-mMt" viewBased="YES" id="gfJ-uH-QZY">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="375"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="32" headerView="GWb-9h-khO" viewBased="YES" id="KeU-Y7-MZ8">
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="235"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn editable="NO" width="300" minWidth="40" maxWidth="1000" id="U4B-PK-Z5B">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Your Apps">
+                                                <tableColumn editable="NO" width="450" minWidth="40" maxWidth="1000" id="zJM-Jq-aH3">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="My Apps">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
-                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="YFF-9g-fv3">
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="ywI-Hz-Lyt">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="UEx-JP-u7m" customClass="AppMenuTableCellView" customModule="AppStoreConnect" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                                        <tableCellView id="Y7w-0S-1Yd" customClass="AppMenuTableCellView" customModule="AppStoreConnect" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="450" height="105"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fYt-W3-Yct" userLabel="App Name">
-                                                                    <rect key="frame" x="14" y="12" width="272" height="17"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="yNG-f0-8TR" userLabel="App Name">
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pYM-kK-ZL8" userLabel="App Name">
+                                                                    <rect key="frame" x="14" y="44" width="438" height="17"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="dXQ-NG-aoG" userLabel="App Name">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -850,38 +873,35 @@
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="fYt-W3-Yct" firstAttribute="leading" secondItem="UEx-JP-u7m" secondAttribute="leading" constant="16" id="HrU-CB-XeC"/>
-                                                                <constraint firstItem="fYt-W3-Yct" firstAttribute="centerY" secondItem="UEx-JP-u7m" secondAttribute="centerY" id="NW9-VF-6VT"/>
-                                                                <constraint firstAttribute="trailing" secondItem="fYt-W3-Yct" secondAttribute="trailing" constant="16" id="aed-hG-mXO"/>
+                                                                <constraint firstAttribute="trailing" secondItem="pYM-kK-ZL8" secondAttribute="trailing" id="CJD-cN-9z5"/>
+                                                                <constraint firstItem="pYM-kK-ZL8" firstAttribute="leading" secondItem="Y7w-0S-1Yd" secondAttribute="leading" constant="16" id="bd9-qP-56u"/>
+                                                                <constraint firstItem="pYM-kK-ZL8" firstAttribute="centerY" secondItem="Y7w-0S-1Yd" secondAttribute="centerY" id="xxO-Ay-b1s"/>
                                                             </constraints>
                                                             <connections>
-                                                                <outlet property="appNameLabel" destination="fYt-W3-Yct" id="50a-37-mOU"/>
+                                                                <outlet property="appNameLabel" destination="pYM-kK-ZL8" id="lV3-vO-Vbl"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
-                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="0sc-rF-n6Z"/>
-                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="wXe-52-9H6"/>
+                                                <outlet property="dataSource" destination="Ma7-Ei-34m" id="chk-7s-3Mw"/>
+                                                <outlet property="delegate" destination="Ma7-Ei-34m" id="1aW-c4-cqM"/>
                                             </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="PRO-VL-amx"/>
-                                </constraints>
                                 <edgeInsets key="contentInsets" left="0.0" right="0.0" top="40" bottom="0.0"/>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="IqJ-C3-OiE">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Jwh-3d-iI9">
                                     <rect key="frame" x="1" y="243" width="164" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Qqe-Nu-vWI">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="WLS-Qg-KJx">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <tableHeaderView key="headerView" focusRingType="none" id="Zd7-av-mMt">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="25"/>
+                                <tableHeaderView key="headerView" focusRingType="none" id="GWb-9h-khO">
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -898,18 +918,125 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="wyS-VJ-Tct" secondAttribute="bottom" id="7gG-wT-gbd"/>
-                            <constraint firstItem="wyS-VJ-Tct" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="BEx-46-uGU"/>
-                            <constraint firstItem="wyS-VJ-Tct" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="sSJ-av-SWa"/>
+                            <constraint firstItem="qGe-HN-DzC" firstAttribute="leading" secondItem="28Q-L5-l44" secondAttribute="leading" id="Cye-Hj-5cR"/>
+                            <constraint firstItem="qGe-HN-DzC" firstAttribute="top" secondItem="28Q-L5-l44" secondAttribute="top" id="dCv-ek-eGT"/>
+                            <constraint firstAttribute="trailing" secondItem="qGe-HN-DzC" secondAttribute="trailing" id="ocB-jW-KUJ"/>
+                            <constraint firstAttribute="bottom" secondItem="qGe-HN-DzC" secondAttribute="bottom" id="uPn-hI-qZD"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="gfJ-uH-QZY" id="17h-e1-6A1"/>
+                        <outlet property="tableView" destination="KeU-Y7-MZ8" id="IIy-FZ-MZ5"/>
                     </connections>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="274" y="740"/>
+            <point key="canvasLocation" x="724" y="645"/>
+        </scene>
+        <!--App Store-->
+        <scene sceneID="P69-yh-mGp">
+            <objects>
+                <viewController title="App Store" id="h5R-Qa-Rbt" customClass="AppDetailViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="S5W-Ug-s6e">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DXX-FQ-YUJ">
+                                <rect key="frame" x="33" y="248" width="37" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="tRa-g0-ocw">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="DXX-FQ-YUJ" firstAttribute="leading" secondItem="S5W-Ug-s6e" secondAttribute="leading" constant="35" id="6yH-T3-m3F"/>
+                            <constraint firstItem="DXX-FQ-YUJ" firstAttribute="top" secondItem="S5W-Ug-s6e" secondAttribute="top" constant="35" id="kY5-Ub-g0Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appTitleLabel" destination="DXX-FQ-YUJ" id="tUT-Ju-4SQ"/>
+                    </connections>
+                </viewController>
+                <customObject id="6hc-R9-yMV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766" y="1256"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="6mP-3P-IPu">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="1" id="GQm-HZ-cuu" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="WUf-Ui-u1x"/>
+                        <tabViewItem id="1BI-jY-EJN"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="ZAJ-Gp-yWi">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="GQm-HZ-cuu" id="hI7-Fc-0zX"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="ZAJ-Gp-yWi" id="1gm-bf-naG"/>
+                        <segue destination="h5R-Qa-Rbt" kind="relationship" relationship="tabItems" id="aro-Um-HJ3"/>
+                        <segue destination="ZaH-R7-Rul" kind="relationship" relationship="tabItems" id="eTr-ab-DCt"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="rAG-ny-0P8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244" y="1256"/>
+        </scene>
+        <!--TestFlight-->
+        <scene sceneID="PXz-VB-le8">
+            <objects>
+                <splitViewController title="TestFlight" id="ZaH-R7-Rul" customClass="TestFlightSplitViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="txY-Ge-GW8"/>
+                        <splitViewItem id="Bcn-IS-N7N"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="EHz-NS-yuw">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="delegate" destination="ZaH-R7-Rul" id="GAn-iN-nZL"/>
+                        </connections>
+                    </splitView>
+                    <connections>
+                        <outlet property="splitView" destination="EHz-NS-yuw" id="Kpg-8U-NVo"/>
+                        <segue destination="GM4-Ig-0Hn" kind="relationship" relationship="splitItems" id="0Sq-3s-TjF"/>
+                        <segue destination="d5d-J4-R5Y" kind="relationship" relationship="splitItems" id="j8x-AP-R4t"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="FXa-sg-h33" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810" y="1256"/>
+        </scene>
+        <!--Test Flight Menu View Controller-->
+        <scene sceneID="R5h-iu-Xxx">
+            <objects>
+                <viewController id="GM4-Ig-0Hn" customClass="TestFlightMenuViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="sCP-QU-Kzr">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="tv0-cc-tX1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2480" y="1070"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jiH-EM-zPL">
+            <objects>
+                <viewController id="d5d-J4-R5Y" sceneMemberID="viewController">
+                    <view key="view" id="bwn-7B-iB0">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="KJ3-qg-aiP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2480" y="1442"/>
         </scene>
     </scenes>
 </document>
