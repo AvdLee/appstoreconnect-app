@@ -24,7 +24,7 @@ final class MenuViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        view.widthAnchor.constraint(equalToConstant: 200).isActive = true
 
         provider.request(.apps()) { [weak self] (result) in
             DispatchQueue.main.async {
