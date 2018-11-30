@@ -16,11 +16,13 @@ final class MainSplitViewController: NSSplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         menuViewController = (children[0] as! MenuViewController)
-        appDetailViewController = (children[1] as! AppDetailViewController)
+        appDetailViewController = (children[1] as! NSTabViewController).children.compactMap { $0 as? AppDetailViewController }.first!
         menuViewController.didSelectApp = { [weak self] app in
             print("Did select app \(String(describing: app.attributes?.name))")
             self?.appDetailViewController.viewModel = AppDetailViewModel(app: app)
         }
+
+        splitView.setPosition(250, ofDividerAt: 0)
     }
 
 }

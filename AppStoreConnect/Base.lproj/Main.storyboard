@@ -707,19 +707,16 @@
                 <splitViewController id="eo4-IL-4OG" customClass="MainSplitViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="90t-he-dY1"/>
-                        <splitViewItem id="uug-Ut-3IZ"/>
+                        <splitViewItem id="h7r-ho-9Jc"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="Y7X-ng-sXX">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <connections>
-                            <outlet property="delegate" destination="eo4-IL-4OG" id="F3j-0H-iNk"/>
-                        </connections>
                     </splitView>
                     <connections>
                         <outlet property="splitView" destination="Y7X-ng-sXX" id="WdH-Cy-HtF"/>
                         <segue destination="Ma7-Ei-34m" kind="relationship" relationship="splitItems" id="T7Q-3y-4qb"/>
-                        <segue destination="h5R-Qa-Rbt" kind="relationship" relationship="splitItems" id="FOH-lG-6uA"/>
+                        <segue destination="GQm-HZ-cuu" kind="relationship" relationship="splitItems" id="Xus-0V-7VG"/>
                     </connections>
                 </splitViewController>
                 <customObject id="50e-nD-913" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -747,7 +744,7 @@
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn editable="NO" width="450" minWidth="40" maxWidth="1000" id="zJM-Jq-aH3">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Your Apps">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="My Apps">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -821,10 +818,10 @@
             </objects>
             <point key="canvasLocation" x="724" y="645"/>
         </scene>
-        <!--App Detail View Controller-->
+        <!--App Store-->
         <scene sceneID="P69-yh-mGp">
             <objects>
-                <viewController id="h5R-Qa-Rbt" customClass="AppDetailViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="App Store" id="h5R-Qa-Rbt" customClass="AppDetailViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="S5W-Ug-s6e">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -849,7 +846,59 @@
                 </viewController>
                 <customObject id="6hc-R9-yMV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="1102"/>
+            <point key="canvasLocation" x="766" y="1256"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="6mP-3P-IPu">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="0" id="GQm-HZ-cuu" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="WUf-Ui-u1x"/>
+                        <tabViewItem identifier="" id="mI5-hi-wLc"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="ZAJ-Gp-yWi">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="GQm-HZ-cuu" id="hI7-Fc-0zX"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="ZAJ-Gp-yWi" id="1gm-bf-naG"/>
+                        <segue destination="h5R-Qa-Rbt" kind="relationship" relationship="tabItems" id="aro-Um-HJ3"/>
+                        <segue destination="kNg-55-h7t" kind="relationship" relationship="tabItems" id="wt8-xr-Eel"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="rAG-ny-0P8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244" y="1256"/>
+        </scene>
+        <!--TestFlight-->
+        <scene sceneID="Vr7-cN-6hv">
+            <objects>
+                <viewController title="TestFlight" id="kNg-55-h7t" sceneMemberID="viewController">
+                    <view key="view" id="O8I-G8-Btx">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="YsA-94-ijQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="1070"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="n4a-mS-Q4Q">
+            <objects>
+                <viewController id="fCY-Qz-oGx" sceneMemberID="viewController">
+                    <view key="view" id="23g-Ob-GO6">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="XqW-kM-vHX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="1442"/>
         </scene>
     </scenes>
 </document>
