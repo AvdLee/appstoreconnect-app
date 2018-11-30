@@ -24,6 +24,9 @@
 		50EACD9321B1EF3200AE60CB /* TestFlightCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9221B1EF3200AE60CB /* TestFlightCoordinator.swift */; };
 		50EACD9521B1EFAE00AE60CB /* TestFlightMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9421B1EFAE00AE60CB /* TestFlightMenuViewModel.swift */; };
 		50EACD9721B1F02500AE60CB /* TestFlightSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9621B1F02500AE60CB /* TestFlightSplitViewController.swift */; };
+		50EACD9C21B1FA9C00AE60CB /* BetaTestersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9A21B1FA9C00AE60CB /* BetaTestersViewController.swift */; };
+		50EACD9D21B1FA9C00AE60CB /* BetaTestersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50EACD9B21B1FA9C00AE60CB /* BetaTestersViewController.xib */; };
+		50EACD9F21B1FD2400AE60CB /* BetaTestersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9E21B1FD2400AE60CB /* BetaTestersViewModel.swift */; };
 		B9186B7FBE5290F3C5E20758 /* Pods_AppStoreConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA1A57F3E5DC8B71F446989 /* Pods_AppStoreConnectTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		50EACD9221B1EF3200AE60CB /* TestFlightCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlightCoordinator.swift; sourceTree = "<group>"; };
 		50EACD9421B1EFAE00AE60CB /* TestFlightMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlightMenuViewModel.swift; sourceTree = "<group>"; };
 		50EACD9621B1F02500AE60CB /* TestFlightSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlightSplitViewController.swift; sourceTree = "<group>"; };
+		50EACD9A21B1FA9C00AE60CB /* BetaTestersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaTestersViewController.swift; sourceTree = "<group>"; };
+		50EACD9B21B1FA9C00AE60CB /* BetaTestersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetaTestersViewController.xib; sourceTree = "<group>"; };
+		50EACD9E21B1FD2400AE60CB /* BetaTestersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaTestersViewModel.swift; sourceTree = "<group>"; };
 		A82639D21BF68509540DD3BC /* Pods_AppStoreConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStoreConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA1A57F3E5DC8B71F446989 /* Pods_AppStoreConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStoreConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -185,6 +191,9 @@
 				50EACD9221B1EF3200AE60CB /* TestFlightCoordinator.swift */,
 				50EACD9421B1EFAE00AE60CB /* TestFlightMenuViewModel.swift */,
 				50EACD9621B1F02500AE60CB /* TestFlightSplitViewController.swift */,
+				50EACD9A21B1FA9C00AE60CB /* BetaTestersViewController.swift */,
+				50EACD9B21B1FA9C00AE60CB /* BetaTestersViewController.xib */,
+				50EACD9E21B1FD2400AE60CB /* BetaTestersViewModel.swift */,
 			);
 			path = TestFlight;
 			sourceTree = "<group>";
@@ -286,6 +295,7 @@
 			files = (
 				50EACD5D21B17C7900AE60CB /* Assets.xcassets in Resources */,
 				50EACD6021B17C7900AE60CB /* Main.storyboard in Resources */,
+				50EACD9D21B1FA9C00AE60CB /* BetaTestersViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +387,8 @@
 				50EACD7821B1938A00AE60CB /* Keys.swift in Sources */,
 				50EACD9121B1EDDB00AE60CB /* AppDetailCoordinator.swift in Sources */,
 				50EACD9721B1F02500AE60CB /* TestFlightSplitViewController.swift in Sources */,
+				50EACD9C21B1FA9C00AE60CB /* BetaTestersViewController.swift in Sources */,
+				50EACD9F21B1FD2400AE60CB /* BetaTestersViewModel.swift in Sources */,
 				50EACD9321B1EF3200AE60CB /* TestFlightCoordinator.swift in Sources */,
 				50EACD9521B1EFAE00AE60CB /* TestFlightMenuViewModel.swift in Sources */,
 				50EACD8121B1AF0200AE60CB /* MenuCoordinator.swift in Sources */,

@@ -12,7 +12,7 @@ import AppStoreConnect_Swift_SDK
 final class TestFlightMenuViewModel {
 
     private let app: App
-    private var betaTestersInfo: BetaTestersResponse?
+    var betaTestersInfo: BetaTestersResponse?
 
     var totalNumberOfTesters: Int {
         return betaTestersInfo?.meta?.paging.total ?? 0

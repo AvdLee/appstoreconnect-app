@@ -23,7 +23,7 @@ final class TestFlightMenuViewController: NSViewController {
         }
     }
 
-    var didSelectTestFlightGroup: ((_ app: BetaGroup) -> Void)?
+    var didSelectBetaTesters: ((_ betaTesters: BetaTestersResponse) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +49,7 @@ extension TestFlightMenuViewController: NSTableViewDelegate {
     }
 
     func tableViewSelectionDidChange(_ notification: Notification) {
-        let table = notification.object as! NSTableView
-//        guard let group = viewModel?.groups[table.selectedRow] else { return }
-//        didSelectTestFlightGroup?(group)
+        guard let betaTesters = viewModel?.betaTestersInfo else { return }
+        didSelectBetaTesters?(betaTesters)
     }
 }

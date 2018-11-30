@@ -24,6 +24,6 @@ final class AppDetailCoordinator {
 
         let testFlightSplitViewController: TestFlightSplitViewController = tabBarController.children[1] as! TestFlightSplitViewController
         let coordinator = TestFlightCoordinator(app: app)
-        coordinator.start(tabBarController: testFlightSplitViewController)
+        coordinator.start(splitViewController: testFlightSplitViewController)
     }
 }

@@ -18,10 +18,17 @@ final class TestFlightCoordinator {
         self.app = app
     }
 
-    func start(tabBarController: NSSplitViewController) {
-        let testFlightMenuViewController = tabBarController.children.first as! TestFlightMenuViewController
+    func start(splitViewController: NSSplitViewController) {
+        let testFlightMenuViewController = splitViewController.children.first as! TestFlightMenuViewController
         let viewModel = TestFlightMenuViewModel(app: app)
         testFlightMenuViewController.viewModel = viewModel
+
+        testFlightMenuViewController.didSelectBetaTesters = { betaTestersResponse in
+            splitViewController.children.remove(at: 1)
+            let viewModel = BetaTestersViewModel(betaTestersResponse: betaTestersResponse)
+            let betaTestersViewController = BetaTestersViewController(viewModel: viewModel)
+            splitViewController.addChild(betaTestersViewController)
+        }
     }
 
 }
