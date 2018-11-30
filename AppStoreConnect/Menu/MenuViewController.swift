@@ -11,13 +11,15 @@ import AppStoreConnect_Swift_SDK
 
 final class MenuViewController: NSViewController {
 
-    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet private weak var tableView: NSTableView!
     private let provider = APIProvider(configuration: APIConfiguration.testConfiguration)
     private var apps: [App]? {
         didSet {
             tableView.reloadData()
         }
     }
+
+    var didSelectApp: ((_ app: App) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,12 @@ extension MenuViewController: NSTableViewDelegate {
         result = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as! AppMenuTableCellView
         result.appNameLabel.stringValue = apps?[row].attributes?.name ?? "Unknown name"
         return result
+    }
+
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        let table = notification.object as! NSTableView
+        guard let app = apps?[table.selectedRow] else { return }
+        didSelectApp?(app)
     }
 }
 
