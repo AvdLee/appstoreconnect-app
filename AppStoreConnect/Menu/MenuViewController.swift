@@ -9,10 +9,14 @@
 import Cocoa
 import AppStoreConnect_Swift_SDK
 
+extension APIProvider {
+    static var shared: APIProvider = APIProvider(configuration: APIConfiguration.testConfiguration)
+}
+
 final class MenuViewController: NSViewController {
 
     @IBOutlet private weak var tableView: NSTableView!
-    private let provider = APIProvider(configuration: APIConfiguration.testConfiguration)
+
     private var apps: [App]? {
         didSet {
             tableView.reloadData()
@@ -26,7 +30,7 @@ final class MenuViewController: NSViewController {
 
         view.widthAnchor.constraint(equalToConstant: 200).isActive = true
 
-        provider.request(.apps()) { [weak self] (result) in
+        APIProvider.shared.request(.apps()) { [weak self] (result) in
             DispatchQueue.main.async {
                 self?.apps = result.value?.data.sortByName()
             }
