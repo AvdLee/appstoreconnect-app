@@ -12,7 +12,12 @@ import AppStoreConnect_Swift_SDK
 final class MenuViewController: NSViewController {
 
     @IBOutlet weak var tableView: NSTableView!
-    private let provider = APIProvider(configuration: APIConfiguration.testConfiguration)
+    private var provider = APIProvider(configuration: APIConfiguration.testConfiguration) {
+        didSet {
+            // TODO: fetch data
+            tableView.reloadData()
+        }
+    }
     private var apps: [App]? {
         didSet {
             tableView.reloadData()
