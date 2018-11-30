@@ -13,19 +13,18 @@ final class MenuViewController: NSViewController {
 
     @IBOutlet weak var tableView: NSTableView!
     private let provider = APIProvider(configuration: APIConfiguration.testConfiguration)
-    private var apps: AppsResponse? {
+    private var apps: [App]? {
         didSet {
             tableView.reloadData()
         }
     }
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         provider.request(.apps()) { [weak self] (result) in
             DispatchQueue.main.async {
-                self?.apps = result.value
+                self?.apps = result.value?.data.sortByName()
             }
         }
     }
@@ -41,7 +40,7 @@ final class MenuViewController: NSViewController {
 
 extension MenuViewController: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return apps?.data.count ?? 0
+        return apps?.count ?? 0
     }
 }
 
@@ -49,7 +48,16 @@ extension MenuViewController: NSTableViewDelegate {
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?{
         var result: AppMenuTableCellView
         result = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as! AppMenuTableCellView
-        result.appNameLabel.stringValue = apps?.data[row].attributes?.name ?? "Unknown name"
+        result.appNameLabel.stringValue = apps?[row].attributes?.name ?? "Unknown name"
         return result
+    }
+}
+
+extension Collection where Element == App {
+    func sortByName() -> [Element] {
+        return sorted(by: { (lhs, rhs) -> Bool in
+            guard let lhsName = lhs.attributes?.name, let rhsName = rhs.attributes?.name else { return false }
+            return lhsName < rhsName
+        })
     }
 }
