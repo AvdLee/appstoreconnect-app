@@ -9,8 +9,24 @@
 import Foundation
 import AppStoreConnect_Swift_SDK
 
-struct TestFlightMenuViewModel {
+final class TestFlightMenuViewModel {
 
-    let app: App
+    private let app: App
+    private var betaTestersInfo: BetaTestersResponse?
+
+    var totalNumberOfTesters: Int {
+        return betaTestersInfo?.meta?.paging.total ?? 0
+    }
+
+    init(app: App) {
+        self.app = app
+    }
+
+    func update(then completion: @escaping () -> Void) {
+        APIProvider.shared.request(.betaTesters(filter: [ListBetaTesters.Filter.apps([app.id])])) { [weak self] (result) in
+            self?.betaTestersInfo = result.value
+            completion()
+        }
+    }
 
 }

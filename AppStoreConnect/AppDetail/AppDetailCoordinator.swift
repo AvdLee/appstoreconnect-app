@@ -21,5 +21,9 @@ final class AppDetailCoordinator {
     func start(tabBarController: NSTabViewController) {
         let appDetailViewController: AppDetailViewController = tabBarController.children.first as! AppDetailViewController
         appDetailViewController.viewModel = AppDetailViewModel(app: app)
+
+        let testFlightSplitViewController: TestFlightSplitViewController = tabBarController.children[1] as! TestFlightSplitViewController
+        let coordinator = TestFlightCoordinator(app: app)
+        coordinator.start(tabBarController: testFlightSplitViewController)
     }
 }
