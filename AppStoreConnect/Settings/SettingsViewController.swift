@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import AppStoreConnect_Swift_SDK
 
 class SettingsViewController: NSViewController, NSTextFieldDelegate {
 
@@ -22,8 +23,11 @@ class SettingsViewController: NSViewController, NSTextFieldDelegate {
     // MARK: - Actions
     
     @IBAction func handleTapDone(_ sender: NSButton) {
-        let secret = Secrets(issuerID: issuerIDTextField.stringValue, privateKeyID: privateKeyIDTextField.stringValue, privateKey: privateKeyTextField.stringValue)
-        secret.store()
+        let secrets = Secrets(issuerID: issuerIDTextField.stringValue, privateKeyID: privateKeyIDTextField.stringValue, privateKey: privateKeyTextField.stringValue)
+        secrets.store()
+        
+        dismiss(nil)
+        APIProvider.configure(with: secrets)
     }
     
     func controlTextDidChange(_ obj: Notification) {

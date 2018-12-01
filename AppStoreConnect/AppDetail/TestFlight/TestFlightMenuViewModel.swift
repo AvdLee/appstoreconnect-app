@@ -23,7 +23,7 @@ final class TestFlightMenuViewModel {
     }
 
     func update(then completion: @escaping () -> Void) {
-        APIProvider.shared.request(.betaTesters(filter: [ListBetaTesters.Filter.apps([app.id])])) { [weak self] (result) in
+        APIProvider.shared?.request(.betaTesters(filter: [ListBetaTesters.Filter.apps([app.id])])) { [weak self] (result) in
             self?.betaTestersInfo = result.value
             completion()
         }

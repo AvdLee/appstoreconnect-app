@@ -704,7 +704,7 @@
         <!--Settings-->
         <scene sceneID="NIM-1O-4g2">
             <objects>
-                <viewController title="Settings" showSeguePresentationStyle="single" id="VA2-4F-SFS" customClass="SettingsViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" storyboardIdentifier="Settings" showSeguePresentationStyle="single" id="VA2-4F-SFS" customClass="SettingsViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="wd8-zc-O5I">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="298"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -794,14 +794,14 @@
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="KdH-yf-eSa" id="HRD-cq-6i6"/>
-                        <outlet property="issuerIDTextField" destination="iBP-wn-Buf" id="55L-0A-hnI"/>
-                        <outlet property="privateKeyIDTextField" destination="loX-rB-5My" id="wou-wI-vFc"/>
-                        <outlet property="privateKeyTextField" destination="fWT-ob-Pi8" id="6bO-Nh-8Xs"/>
+                        <outlet property="issuerIDTextField" destination="loX-rB-5My" id="a9Z-dA-OvB"/>
+                        <outlet property="privateKeyIDTextField" destination="iBP-wn-Buf" id="XQe-hM-lHp"/>
+                        <outlet property="privateKeyTextField" destination="fWT-ob-Pi8" id="aad-mR-7g5"/>
                     </connections>
                 </viewController>
                 <customObject id="0Zd-nI-Nc3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1308" y="646"/>
+            <point key="canvasLocation" x="1257" y="445"/>
         </scene>
         <!--Main Split View Controller-->
         <scene sceneID="L4x-lN-lue">
@@ -912,9 +912,6 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <connections>
-                                    <segue destination="VA2-4F-SFS" kind="sheet" id="P9J-oU-qId"/>
-                                </connections>
                             </button>
                         </subviews>
                         <constraints>

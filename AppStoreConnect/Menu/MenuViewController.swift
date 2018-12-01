@@ -10,7 +10,22 @@ import Cocoa
 import AppStoreConnect_Swift_SDK
 
 extension APIProvider {
-    static var shared: APIProvider = APIProvider(configuration: APIConfiguration.testConfiguration)
+    static var shared: APIProvider?
+    
+    convenience init(secrets: Secrets) {
+        let apiConfiguration = APIConfiguration(issuerID: secrets.issuerID, privateKeyID: secrets.privateKeyID, privateKey: secrets.privateKey)
+        self.init(configuration: apiConfiguration)
+    }
+    
+    static func configure(with secrets: Secrets) {
+        APIProvider.shared = APIProvider(secrets: secrets)
+        guard let splitViewController = AppDelegate.visibleViewController as? MainSplitViewController,
+            let menuViewController = splitViewController.splitViewItems.first?.viewController as? MenuViewController else {
+            return
+        }
+        
+        menuViewController.reset()
+    }
 }
 
 final class MenuViewController: NSViewController {
@@ -24,17 +39,19 @@ final class MenuViewController: NSViewController {
     }
 
     var didSelectApp: ((_ app: App) -> Void)?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        view.widthAnchor.constraint(equalToConstant: 200).isActive = true
-
-        APIProvider.shared.request(.apps()) { [weak self] (result) in
+    
+    func reset() {
+        APIProvider.shared?.request(.apps()) { [weak self] (result) in
             DispatchQueue.main.async {
                 self?.apps = result.value?.data.sortByName()
             }
         }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        reset()
+        view.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
 
 }
