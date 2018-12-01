@@ -14,11 +14,20 @@ final class BetaTestersViewModel {
     private let betaTestersResponse: BetaTestersResponse
 
     var title: String {
-        return "All testers \(self.betaTestersResponse.meta?.paging.total ?? 0)"
+        return "All testers \(totalNumberOfTesters)"
+    }
+
+    var totalNumberOfTesters: Int {
+        return self.betaTestersResponse.meta?.paging.total ?? 0
     }
 
     init(betaTestersResponse: BetaTestersResponse) {
         self.betaTestersResponse = betaTestersResponse
+    }
+
+    func betaTester(for row: Int) -> BetaTester? {
+        guard row < betaTestersResponse.data.count else { return nil }
+        return betaTestersResponse.data[row]
     }
 
 }

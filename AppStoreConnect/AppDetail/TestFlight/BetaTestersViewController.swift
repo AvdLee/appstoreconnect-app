@@ -11,6 +11,8 @@ import Cocoa
 final class BetaTestersViewController: NSViewController {
 
     @IBOutlet weak var titleLabel: NSTextField!
+    @IBOutlet weak var tableView: NSTableView!
+
     let viewModel: BetaTestersViewModel
 
     required init(viewModel: BetaTestersViewModel) {
@@ -30,6 +32,26 @@ final class BetaTestersViewController: NSViewController {
 
     private func updateViews() {
         titleLabel.stringValue = viewModel.title
+        tableView.reloadData()
+    }
+}
+
+extension BetaTestersViewController: NSTableViewDataSource, NSTableViewDelegate {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return viewModel.totalNumberOfTesters
     }
 
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        guard let betaTester = viewModel.betaTester(for: row), let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "BetaTesterCell"), owner: nil) as? NSTableCellView else { return nil }
+
+        if tableColumn == tableView.tableColumns[0] {
+            cell.textField?.stringValue = betaTester.attributes?.email ?? ""
+        } else if tableColumn == tableView.tableColumns[1] {
+            let firstName = betaTester.attributes?.firstName ?? ""
+            let lastName = betaTester.attributes?.lastName ?? ""
+            cell.textField?.stringValue = [firstName, lastName].joined(separator: " ")
+        }
+
+        return cell
+    }
 }

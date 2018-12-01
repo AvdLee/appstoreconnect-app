@@ -27,11 +27,9 @@ final class MainSplitViewController: NSSplitViewController {
             self?.appDetailCoordinator?.start(tabBarController: self!.detailTabBarController)
             
         }
-
     }
 
     override func splitView(_ splitView: NSSplitView, effectiveRect proposedEffectiveRect: NSRect, forDrawnRect drawnRect: NSRect, ofDividerAt dividerIndex: Int) -> NSRect {
         return NSZeroRect
     }
-
 }

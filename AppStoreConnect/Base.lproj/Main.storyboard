@@ -851,12 +851,12 @@
         <!--Tab View Controller-->
         <scene sceneID="6mP-3P-IPu">
             <objects>
-                <tabViewController selectedTabViewItemIndex="1" id="GQm-HZ-cuu" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" canPropagateSelectedChildViewControllerTitle="NO" id="GQm-HZ-cuu" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem id="WUf-Ui-u1x"/>
                         <tabViewItem id="1BI-jY-EJN"/>
                     </tabViewItems>
-                    <tabView key="tabView" type="noTabsNoBorder" id="ZAJ-Gp-yWi">
+                    <tabView key="tabView" drawsBackground="NO" type="noTabsNoBorder" id="ZAJ-Gp-yWi">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>

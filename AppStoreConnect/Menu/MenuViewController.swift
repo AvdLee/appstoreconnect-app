@@ -33,6 +33,7 @@ final class MenuViewController: NSViewController {
         APIProvider.shared.request(.apps()) { [weak self] (result) in
             DispatchQueue.main.async {
                 self?.apps = result.value?.data.sortByName()
+                self?.tableView.selectRowIndexes(IndexSet(integer: 0), byExtendingSelection: false)
             }
         }
     }
