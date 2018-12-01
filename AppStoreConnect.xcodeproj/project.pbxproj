@@ -19,14 +19,14 @@
 		50EACD8121B1AF0200AE60CB /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD8021B1AF0200AE60CB /* MenuCoordinator.swift */; };
 		50EACD8421B1B18300AE60CB /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD8321B1B18300AE60CB /* MainSplitViewController.swift */; };
 		50EACD8721B1B3D600AE60CB /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD8621B1B3D600AE60CB /* AppDetailViewController.swift */; };
-		50EACD8F21B1EDCE00AE60CB /* TestFlightMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD8E21B1EDCE00AE60CB /* TestFlightMenuViewController.swift */; };
 		50EACD9121B1EDDB00AE60CB /* AppDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9021B1EDDB00AE60CB /* AppDetailCoordinator.swift */; };
 		50EACD9321B1EF3200AE60CB /* TestFlightCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9221B1EF3200AE60CB /* TestFlightCoordinator.swift */; };
-		50EACD9521B1EFAE00AE60CB /* TestFlightMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9421B1EFAE00AE60CB /* TestFlightMenuViewModel.swift */; };
 		50EACD9721B1F02500AE60CB /* TestFlightSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9621B1F02500AE60CB /* TestFlightSplitViewController.swift */; };
-		50EACD9C21B1FA9C00AE60CB /* BetaTestersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9A21B1FA9C00AE60CB /* BetaTestersViewController.swift */; };
-		50EACD9D21B1FA9C00AE60CB /* BetaTestersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50EACD9B21B1FA9C00AE60CB /* BetaTestersViewController.xib */; };
-		50EACD9F21B1FD2400AE60CB /* BetaTestersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9E21B1FD2400AE60CB /* BetaTestersViewModel.swift */; };
+		50EACDA721B2FD9A00AE60CB /* BetaTestersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACDA121B2FD9900AE60CB /* BetaTestersViewController.swift */; };
+		50EACDA821B2FD9A00AE60CB /* BetaTestersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACDA221B2FD9900AE60CB /* BetaTestersViewModel.swift */; };
+		50EACDA921B2FD9A00AE60CB /* BetaTestersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50EACDA321B2FD9900AE60CB /* BetaTestersViewController.xib */; };
+		50EACDAA21B2FD9A00AE60CB /* TestFlightMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACDA521B2FD9900AE60CB /* TestFlightMenuViewController.swift */; };
+		50EACDAB21B2FD9A00AE60CB /* TestFlightMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACDA621B2FD9900AE60CB /* TestFlightMenuViewModel.swift */; };
 		B9186B7FBE5290F3C5E20758 /* Pods_AppStoreConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA1A57F3E5DC8B71F446989 /* Pods_AppStoreConnectTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,14 +61,14 @@
 		50EACD8021B1AF0200AE60CB /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		50EACD8321B1B18300AE60CB /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 		50EACD8621B1B3D600AE60CB /* AppDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
-		50EACD8E21B1EDCE00AE60CB /* TestFlightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFlightMenuViewController.swift; sourceTree = "<group>"; };
 		50EACD9021B1EDDB00AE60CB /* AppDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailCoordinator.swift; sourceTree = "<group>"; };
 		50EACD9221B1EF3200AE60CB /* TestFlightCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlightCoordinator.swift; sourceTree = "<group>"; };
-		50EACD9421B1EFAE00AE60CB /* TestFlightMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlightMenuViewModel.swift; sourceTree = "<group>"; };
 		50EACD9621B1F02500AE60CB /* TestFlightSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlightSplitViewController.swift; sourceTree = "<group>"; };
-		50EACD9A21B1FA9C00AE60CB /* BetaTestersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaTestersViewController.swift; sourceTree = "<group>"; };
-		50EACD9B21B1FA9C00AE60CB /* BetaTestersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetaTestersViewController.xib; sourceTree = "<group>"; };
-		50EACD9E21B1FD2400AE60CB /* BetaTestersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaTestersViewModel.swift; sourceTree = "<group>"; };
+		50EACDA121B2FD9900AE60CB /* BetaTestersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetaTestersViewController.swift; sourceTree = "<group>"; };
+		50EACDA221B2FD9900AE60CB /* BetaTestersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetaTestersViewModel.swift; sourceTree = "<group>"; };
+		50EACDA321B2FD9900AE60CB /* BetaTestersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BetaTestersViewController.xib; sourceTree = "<group>"; };
+		50EACDA521B2FD9900AE60CB /* TestFlightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFlightMenuViewController.swift; sourceTree = "<group>"; };
+		50EACDA621B2FD9900AE60CB /* TestFlightMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFlightMenuViewModel.swift; sourceTree = "<group>"; };
 		A82639D21BF68509540DD3BC /* Pods_AppStoreConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStoreConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA1A57F3E5DC8B71F446989 /* Pods_AppStoreConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStoreConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -187,15 +187,31 @@
 		50EACD8D21B1EDCE00AE60CB /* TestFlight */ = {
 			isa = PBXGroup;
 			children = (
-				50EACD8E21B1EDCE00AE60CB /* TestFlightMenuViewController.swift */,
+				50EACDA021B2FD9900AE60CB /* BetaTestersViewController */,
+				50EACDA421B2FD9900AE60CB /* Menu */,
 				50EACD9221B1EF3200AE60CB /* TestFlightCoordinator.swift */,
-				50EACD9421B1EFAE00AE60CB /* TestFlightMenuViewModel.swift */,
 				50EACD9621B1F02500AE60CB /* TestFlightSplitViewController.swift */,
-				50EACD9A21B1FA9C00AE60CB /* BetaTestersViewController.swift */,
-				50EACD9B21B1FA9C00AE60CB /* BetaTestersViewController.xib */,
-				50EACD9E21B1FD2400AE60CB /* BetaTestersViewModel.swift */,
 			);
 			path = TestFlight;
+			sourceTree = "<group>";
+		};
+		50EACDA021B2FD9900AE60CB /* BetaTestersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				50EACDA121B2FD9900AE60CB /* BetaTestersViewController.swift */,
+				50EACDA221B2FD9900AE60CB /* BetaTestersViewModel.swift */,
+				50EACDA321B2FD9900AE60CB /* BetaTestersViewController.xib */,
+			);
+			path = BetaTestersViewController;
+			sourceTree = "<group>";
+		};
+		50EACDA421B2FD9900AE60CB /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				50EACDA521B2FD9900AE60CB /* TestFlightMenuViewController.swift */,
+				50EACDA621B2FD9900AE60CB /* TestFlightMenuViewModel.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		5F072C8F4BDEE146D39843DB /* Pods */ = {
@@ -220,6 +236,7 @@
 				50EACD5121B17C7700AE60CB /* Sources */,
 				50EACD5221B17C7700AE60CB /* Frameworks */,
 				50EACD5321B17C7700AE60CB /* Resources */,
+				50BD4CF921B307EA00DB754C /* Xcode 10 Build System Caching Fix */,
 				E5240230696EB1456ED1E828 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -295,7 +312,7 @@
 			files = (
 				50EACD5D21B17C7900AE60CB /* Assets.xcassets in Resources */,
 				50EACD6021B17C7900AE60CB /* Main.storyboard in Resources */,
-				50EACD9D21B1FA9C00AE60CB /* BetaTestersViewController.xib in Resources */,
+				50EACDA921B2FD9A00AE60CB /* BetaTestersViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +347,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		50BD4CF921B307EA00DB754C /* Xcode 10 Build System Caching Fix */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Xcode 10 Build System Caching Fix";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nfind \"${SRCROOT}/Pods\" -type f -name *frameworks.sh -exec bash -c \"touch \\\"{}\\\"\" \\;\n";
 		};
 		C431224D6C26743B5B9DDD75 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -387,18 +422,18 @@
 				50EACD7821B1938A00AE60CB /* Keys.swift in Sources */,
 				50EACD9121B1EDDB00AE60CB /* AppDetailCoordinator.swift in Sources */,
 				50EACD9721B1F02500AE60CB /* TestFlightSplitViewController.swift in Sources */,
-				50EACD9C21B1FA9C00AE60CB /* BetaTestersViewController.swift in Sources */,
-				50EACD9F21B1FD2400AE60CB /* BetaTestersViewModel.swift in Sources */,
+				50EACDA821B2FD9A00AE60CB /* BetaTestersViewModel.swift in Sources */,
 				50EACD9321B1EF3200AE60CB /* TestFlightCoordinator.swift in Sources */,
-				50EACD9521B1EFAE00AE60CB /* TestFlightMenuViewModel.swift in Sources */,
+				50EACDAA21B2FD9A00AE60CB /* TestFlightMenuViewController.swift in Sources */,
 				50EACD8121B1AF0200AE60CB /* MenuCoordinator.swift in Sources */,
 				50EACD5921B17C7700AE60CB /* AppDelegate.swift in Sources */,
 				50EACD8721B1B3D600AE60CB /* AppDetailViewController.swift in Sources */,
 				50EACD8421B1B18300AE60CB /* MainSplitViewController.swift in Sources */,
 				50EACD7D21B195D100AE60CB /* AppMenuTableCellView.swift in Sources */,
 				50EACD7F21B1A0AA00AE60CB /* TransparentWindowController.swift in Sources */,
-				50EACD8F21B1EDCE00AE60CB /* TestFlightMenuViewController.swift in Sources */,
+				50EACDAB21B2FD9A00AE60CB /* TestFlightMenuViewModel.swift in Sources */,
 				50EACD7B21B1958A00AE60CB /* MenuViewController.swift in Sources */,
+				50EACDA721B2FD9A00AE60CB /* BetaTestersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

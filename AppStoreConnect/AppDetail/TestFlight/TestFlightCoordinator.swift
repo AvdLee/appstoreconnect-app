@@ -23,9 +23,9 @@ final class TestFlightCoordinator {
         let viewModel = TestFlightMenuViewModel(app: app)
         testFlightMenuViewController.viewModel = viewModel
 
-        testFlightMenuViewController.didSelectBetaTesters = { betaTestersResponse in
+        testFlightMenuViewController.didSelectBetaTesters = { betaTesters in
             splitViewController.children.remove(at: 1)
-            let viewModel = BetaTestersViewModel(betaTestersResponse: betaTestersResponse)
+            let viewModel = BetaTestersViewModel(betaTesters: betaTesters)
             let betaTestersViewController = BetaTestersViewController(viewModel: viewModel)
             splitViewController.addChild(betaTestersViewController)
         }

@@ -23,7 +23,7 @@ final class TestFlightMenuViewController: NSViewController {
         }
     }
 
-    var didSelectBetaTesters: ((_ betaTesters: BetaTestersResponse) -> Void)?
+    var didSelectBetaTesters: ((_ betaTesters: [BetaTester]) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ extension TestFlightMenuViewController: NSTableViewDelegate {
     }
 
     func tableViewSelectionDidChange(_ notification: Notification) {
-        guard let betaTesters = viewModel?.betaTestersInfo else { return }
+        guard let betaTesters = viewModel?.betaTesters else { return }
         didSelectBetaTesters?(betaTesters)
     }
 }
