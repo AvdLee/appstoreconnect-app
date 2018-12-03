@@ -19,9 +19,9 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqj-UG-P1P">
-                    <rect key="frame" x="192" y="240" width="96" height="22"/>
+                    <rect key="frame" x="176" y="240" width="128" height="22"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="96" id="lg2-24-XfC"/>
+                        <constraint firstAttribute="width" constant="128" id="lg2-24-XfC"/>
                     </constraints>
                     <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="qdZ-S0-hap">
                         <font key="font" metaFont="system"/>
@@ -30,7 +30,7 @@
                     </searchFieldCell>
                 </searchField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dyo-Gz-eH7">
-                    <rect key="frame" x="12" y="241" width="102" height="19"/>
+                    <rect key="frame" x="14" y="241" width="102" height="19"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Testers (400)" id="ewY-dh-5Yy">
                         <font key="font" metaFont="systemSemibold" size="15"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -128,7 +128,7 @@
                         <rect key="frame" x="1" y="215" width="478" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="O2t-hs-TXg">
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="O2t-hs-TXg">
                         <rect key="frame" x="224" y="17" width="15" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
@@ -137,17 +137,31 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QyN-0H-mGt">
+                    <rect key="frame" x="126" y="243" width="11" height="15"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="BlS-J0-XhC">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <color key="contentTintColor" red="0.25098039220000001" green="0.62352941179999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstItem="QyN-0H-mGt" firstAttribute="centerY" secondItem="dyo-Gz-eH7" secondAttribute="centerY" id="2hp-xM-EtM"/>
                 <constraint firstItem="dyo-Gz-eH7" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="48o-jn-RYW"/>
                 <constraint firstItem="9Ym-le-enH" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="50l-f0-bAK"/>
                 <constraint firstItem="dyo-Gz-eH7" firstAttribute="centerY" secondItem="Nqj-UG-P1P" secondAttribute="centerY" id="AjE-JI-x1v"/>
                 <constraint firstAttribute="bottom" secondItem="9Ym-le-enH" secondAttribute="bottom" id="Sdv-2r-rUC"/>
                 <constraint firstItem="9Ym-le-enH" firstAttribute="top" secondItem="Nqj-UG-P1P" secondAttribute="bottom" constant="8" id="T5G-9c-cWY"/>
-                <constraint firstItem="dyo-Gz-eH7" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="14" id="YDc-tl-Ok6"/>
+                <constraint firstItem="dyo-Gz-eH7" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="16" id="YDc-tl-Ok6"/>
+                <constraint firstItem="Nqj-UG-P1P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QyN-0H-mGt" secondAttribute="trailing" constant="16" id="eXb-O4-urq"/>
                 <constraint firstAttribute="trailing" secondItem="9Ym-le-enH" secondAttribute="trailing" id="hzn-Lb-gxJ"/>
                 <constraint firstItem="Nqj-UG-P1P" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="v9T-CD-ZLZ"/>
+                <constraint firstItem="QyN-0H-mGt" firstAttribute="leading" secondItem="dyo-Gz-eH7" secondAttribute="trailing" constant="12" id="vmc-V9-2CT"/>
             </constraints>
         </customView>
     </objects>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
 </document>
