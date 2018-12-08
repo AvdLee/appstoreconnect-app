@@ -29,7 +29,8 @@ final class AppDetailViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+
+        title = viewModel?.title
     }
     
 }

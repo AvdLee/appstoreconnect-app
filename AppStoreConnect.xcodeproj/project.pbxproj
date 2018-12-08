@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13E0C2641DA88C924AC63329 /* Pods_AppStoreConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82639D21BF68509540DD3BC /* Pods_AppStoreConnect.framework */; };
+		50AD15D521BC24910049E1FE /* MenuFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD15D421BC24910049E1FE /* MenuFlowCoordinator.swift */; };
 		50EACD5921B17C7700AE60CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD5821B17C7700AE60CB /* AppDelegate.swift */; };
 		50EACD5D21B17C7900AE60CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50EACD5C21B17C7900AE60CB /* Assets.xcassets */; };
 		50EACD6021B17C7900AE60CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50EACD5E21B17C7900AE60CB /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		50EACD7B21B1958A00AE60CB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD7A21B1958A00AE60CB /* MenuViewController.swift */; };
 		50EACD7D21B195D100AE60CB /* AppMenuTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD7C21B195D100AE60CB /* AppMenuTableCellView.swift */; };
 		50EACD7F21B1A0AA00AE60CB /* TransparentWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD7E21B1A0AA00AE60CB /* TransparentWindowController.swift */; };
-		50EACD8121B1AF0200AE60CB /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD8021B1AF0200AE60CB /* MenuCoordinator.swift */; };
 		50EACD8421B1B18300AE60CB /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD8321B1B18300AE60CB /* MainSplitViewController.swift */; };
 		50EACD8721B1B3D600AE60CB /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD8621B1B3D600AE60CB /* AppDetailViewController.swift */; };
 		50EACD9121B1EDDB00AE60CB /* AppDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD9021B1EDDB00AE60CB /* AppDetailCoordinator.swift */; };
@@ -45,6 +45,7 @@
 		1FFCD194595EC034229699CE /* Pods-AppStoreConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreConnect.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppStoreConnect/Pods-AppStoreConnect.release.xcconfig"; sourceTree = "<group>"; };
 		34A89FCDE0E6FC9F5A96A110 /* Pods-AppStoreConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreConnectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppStoreConnectTests/Pods-AppStoreConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C2FAC4A432C140E6F920BC1 /* Pods-AppStoreConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreConnectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppStoreConnectTests/Pods-AppStoreConnectTests.release.xcconfig"; sourceTree = "<group>"; };
+		50AD15D421BC24910049E1FE /* MenuFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFlowCoordinator.swift; sourceTree = "<group>"; };
 		50EACD5521B17C7700AE60CB /* AppStoreConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EACD5821B17C7700AE60CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50EACD5C21B17C7900AE60CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		50EACD7A21B1958A00AE60CB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		50EACD7C21B195D100AE60CB /* AppMenuTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenuTableCellView.swift; sourceTree = "<group>"; };
 		50EACD7E21B1A0AA00AE60CB /* TransparentWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentWindowController.swift; sourceTree = "<group>"; };
-		50EACD8021B1AF0200AE60CB /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		50EACD8321B1B18300AE60CB /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 		50EACD8621B1B3D600AE60CB /* AppDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
 		50EACD9021B1EDDB00AE60CB /* AppDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailCoordinator.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 			children = (
 				50EACD7A21B1958A00AE60CB /* MenuViewController.swift */,
 				50EACD7C21B195D100AE60CB /* AppMenuTableCellView.swift */,
-				50EACD8021B1AF0200AE60CB /* MenuCoordinator.swift */,
+				50AD15D421BC24910049E1FE /* MenuFlowCoordinator.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -425,9 +425,9 @@
 				50EACDA821B2FD9A00AE60CB /* BetaTestersViewModel.swift in Sources */,
 				50EACD9321B1EF3200AE60CB /* TestFlightCoordinator.swift in Sources */,
 				50EACDAA21B2FD9A00AE60CB /* TestFlightMenuViewController.swift in Sources */,
-				50EACD8121B1AF0200AE60CB /* MenuCoordinator.swift in Sources */,
 				50EACD5921B17C7700AE60CB /* AppDelegate.swift in Sources */,
 				50EACD8721B1B3D600AE60CB /* AppDetailViewController.swift in Sources */,
+				50AD15D521BC24910049E1FE /* MenuFlowCoordinator.swift in Sources */,
 				50EACD8421B1B18300AE60CB /* MainSplitViewController.swift in Sources */,
 				50EACD7D21B195D100AE60CB /* AppMenuTableCellView.swift in Sources */,
 				50EACD7F21B1A0AA00AE60CB /* TransparentWindowController.swift in Sources */,

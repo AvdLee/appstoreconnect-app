@@ -683,68 +683,47 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" customClass="TransparentWindowController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="TransparentWindowController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="1000" height="700"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="eo4-IL-4OG" kind="relationship" relationship="window.shadowedContentViewController" id="aA2-ui-1aq"/>
+                        <segue destination="Ma7-Ei-34m" kind="relationship" relationship="window.shadowedContentViewController" id="vip-YI-EwL"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Main Split View Controller-->
-        <scene sceneID="L4x-lN-lue">
-            <objects>
-                <splitViewController id="eo4-IL-4OG" customClass="MainSplitViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
-                    <splitViewItems>
-                        <splitViewItem id="90t-he-dY1"/>
-                        <splitViewItem id="h7r-ho-9Jc"/>
-                    </splitViewItems>
-                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="Y7X-ng-sXX">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </splitView>
-                    <connections>
-                        <outlet property="splitView" destination="Y7X-ng-sXX" id="WdH-Cy-HtF"/>
-                        <segue destination="Ma7-Ei-34m" kind="relationship" relationship="splitItems" id="T7Q-3y-4qb"/>
-                        <segue destination="GQm-HZ-cuu" kind="relationship" relationship="splitItems" id="Xus-0V-7VG"/>
-                    </connections>
-                </splitViewController>
-                <customObject id="50e-nD-913" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="75" y="777"/>
-        </scene>
         <!--Menu View Controller-->
         <scene sceneID="93O-R0-JUM">
             <objects>
                 <viewController id="Ma7-Ei-34m" customClass="MenuViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="28Q-L5-l44">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="470"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGe-HN-DzC">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                                <clipView key="contentView" id="lvU-e4-E0J">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <rect key="frame" x="200" y="0.0" width="400" height="470"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="lvU-e4-E0J">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="470"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="32" headerView="GWb-9h-khO" viewBased="YES" id="KeU-Y7-MZ8">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="235"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="32" headerView="GWb-9h-khO" viewBased="YES" id="KeU-Y7-MZ8">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="405"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn editable="NO" width="450" minWidth="40" maxWidth="1000" id="zJM-Jq-aH3">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="My Apps">
+                                                <tableColumn editable="NO" width="400" minWidth="40" maxWidth="1000" id="zJM-Jq-aH3">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Select an app">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -757,11 +736,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="Y7w-0S-1Yd" customClass="AppMenuTableCellView" customModule="AppStoreConnect" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="450" height="105"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="400" height="105"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pYM-kK-ZL8" userLabel="App Name">
-                                                                    <rect key="frame" x="14" y="44" width="438" height="17"/>
+                                                                    <rect key="frame" x="14" y="44" width="388" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="dXQ-NG-aoG" userLabel="App Name">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -787,10 +766,14 @@
                                             </connections>
                                         </tableView>
                                     </subviews>
+                                    <nil key="backgroundColor"/>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="pfP-IO-wl9"/>
+                                </constraints>
                                 <edgeInsets key="contentInsets" left="0.0" right="0.0" top="40" bottom="0.0"/>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Jwh-3d-iI9">
-                                    <rect key="frame" x="1" y="243" width="164" height="16"/>
+                                    <rect key="frame" x="0.0" y="454" width="400" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="WLS-Qg-KJx">
@@ -798,15 +781,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" focusRingType="none" id="GWb-9h-khO">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="qGe-HN-DzC" firstAttribute="leading" secondItem="28Q-L5-l44" secondAttribute="leading" id="Cye-Hj-5cR"/>
+                            <constraint firstItem="qGe-HN-DzC" firstAttribute="centerX" secondItem="28Q-L5-l44" secondAttribute="centerX" id="ZtK-ph-RZy"/>
                             <constraint firstItem="qGe-HN-DzC" firstAttribute="top" secondItem="28Q-L5-l44" secondAttribute="top" id="dCv-ek-eGT"/>
-                            <constraint firstAttribute="trailing" secondItem="qGe-HN-DzC" secondAttribute="trailing" id="ocB-jW-KUJ"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qGe-HN-DzC" secondAttribute="trailing" id="f56-mk-BAw"/>
+                            <constraint firstItem="qGe-HN-DzC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="28Q-L5-l44" secondAttribute="leading" id="hpb-Gf-w7G"/>
                             <constraint firstAttribute="bottom" secondItem="qGe-HN-DzC" secondAttribute="bottom" id="uPn-hI-qZD"/>
                         </constraints>
                     </view>
@@ -816,57 +800,25 @@
                 </viewController>
                 <customObject id="1qn-pg-M77" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="645"/>
+            <point key="canvasLocation" x="75" y="803"/>
         </scene>
-        <!--App Store-->
-        <scene sceneID="P69-yh-mGp">
-            <objects>
-                <viewController title="App Store" id="h5R-Qa-Rbt" customClass="AppDetailViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="S5W-Ug-s6e">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DXX-FQ-YUJ">
-                                <rect key="frame" x="33" y="248" width="37" height="17"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="tRa-g0-ocw">
-                                    <font key="font" usesAppearanceFont="YES"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="DXX-FQ-YUJ" firstAttribute="leading" secondItem="S5W-Ug-s6e" secondAttribute="leading" constant="35" id="6yH-T3-m3F"/>
-                            <constraint firstItem="DXX-FQ-YUJ" firstAttribute="top" secondItem="S5W-Ug-s6e" secondAttribute="top" constant="35" id="kY5-Ub-g0Y"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="appTitleLabel" destination="DXX-FQ-YUJ" id="tUT-Ju-4SQ"/>
-                    </connections>
-                </viewController>
-                <customObject id="6hc-R9-yMV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="766" y="1256"/>
-        </scene>
-        <!--Tab View Controller-->
+        <!--Title-->
         <scene sceneID="6mP-3P-IPu">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" canPropagateSelectedChildViewControllerTitle="NO" id="GQm-HZ-cuu" sceneMemberID="viewController">
+                <tabViewController title="Title" storyboardIdentifier="DetailTabViewController" selectedTabViewItemIndex="0" canPropagateSelectedChildViewControllerTitle="NO" id="GQm-HZ-cuu" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem id="WUf-Ui-u1x"/>
                         <tabViewItem id="1BI-jY-EJN"/>
                     </tabViewItems>
                     <tabView key="tabView" drawsBackground="NO" type="noTabsNoBorder" id="ZAJ-Gp-yWi">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <font key="font" metaFont="message"/>
+                        <font key="font" metaFont="system"/>
                         <connections>
                             <outlet property="delegate" destination="GQm-HZ-cuu" id="hI7-Fc-0zX"/>
                         </connections>
                     </tabView>
                     <connections>
                         <outlet property="tabView" destination="ZAJ-Gp-yWi" id="1gm-bf-naG"/>
-                        <segue destination="h5R-Qa-Rbt" kind="relationship" relationship="tabItems" id="aro-Um-HJ3"/>
                         <segue destination="ZaH-R7-Rul" kind="relationship" relationship="tabItems" id="eTr-ab-DCt"/>
                     </connections>
                 </tabViewController>
