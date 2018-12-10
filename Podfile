@@ -6,7 +6,7 @@ target 'AppStoreConnect' do
   use_frameworks!
 
   # Pods for AppStoreConnect
-  pod 'AppStoreConnect-Swift-SDK', :git => 'https://github.com/AvdLee/appstoreconnect-swift-sdk.git', :branch => 'feature/mac-support'
+  pod 'AppStoreConnect-Swift-SDK', :git => 'https://github.com/AvdLee/appstoreconnect-swift-sdk.git'
 
   target 'AppStoreConnectTests' do
     inherit! :search_paths
