@@ -144,6 +144,9 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <color key="contentTintColor" red="0.25098039220000001" green="0.62352941179999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="addNewUser:" target="-2" id="pGa-uH-Twy"/>
+                    </connections>
                 </button>
             </subviews>
             <constraints>

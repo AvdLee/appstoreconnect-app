@@ -34,6 +34,11 @@ final class BetaTestersViewController: NSViewController {
         titleLabel.stringValue = viewModel.title
         tableView.reloadData()
     }
+
+    @IBAction func addNewUser(_ sender: NSButton) {
+        let addUserViewController = AddTestFlightUserViewController(nibName: "AddTestFlightUserViewController", bundle: nil)
+        present(addUserViewController, asPopoverRelativeTo: sender.bounds, of: sender, preferredEdge: NSRectEdge.maxY, behavior: NSPopover.Behavior.semitransient)
+    }
 }
 
 extension BetaTestersViewController: NSTableViewDataSource, NSTableViewDelegate {
