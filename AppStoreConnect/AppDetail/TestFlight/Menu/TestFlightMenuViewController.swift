@@ -19,7 +19,7 @@ final class TestFlightMenuViewController: NSViewController {
         }
     }
 
-    var didSelectBetaTesters: ((_ betaTesters: [BetaTester]) -> Void)?
+    var didSelectBetaGroup: ((_ betaGroup: BetaGroup?, _ betaTesters: [BetaTester]) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +45,17 @@ extension TestFlightMenuViewController: NSTableViewDelegate {
     }
 
     func tableViewSelectionDidChange(_ notification: Notification) {
-        guard let betaTesters = viewModel?.betaTesters else { return }
-        didSelectBetaTesters?(betaTesters)
+        guard let viewModel = viewModel else { return }
+        if tableView.selectedRow == 0 {
+            didSelectBetaGroup?(nil, viewModel.betaTesters)
+        } else {
+            let betaGroup = viewModel.betaGroups[tableView.selectedRow - 1]
+            let betaTesters = viewModel.betaTesters.filter { betaTester in
+                return betaGroup.relationships?.betaTesters?.data?.contains(where: { $0.id == betaTester.id }) == true
+            }
+
+            didSelectBetaGroup?(betaGroup, betaTesters)
+        }
     }
 }
 

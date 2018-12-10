@@ -13,6 +13,7 @@ final class BetaTestersViewController: NSViewController {
     @IBOutlet weak var titleLabel: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var searchTextField: NSSearchField!
+    @IBOutlet weak var addNewUserButton: NSButton!
 
     let viewModel: BetaTestersViewModel
 
@@ -33,11 +34,13 @@ final class BetaTestersViewController: NSViewController {
 
     private func updateViews() {
         titleLabel.stringValue = viewModel.title
+        addNewUserButton.isHidden = !viewModel.canAddNewUser
         tableView.reloadData()
     }
 
     @IBAction func addNewUser(_ sender: NSButton) {
-        let addUserViewController = AddTestFlightUserViewController(nibName: "AddTestFlightUserViewController", bundle: nil)
+        guard let betaGroup = viewModel.betaGroup else { return }
+        let addUserViewController = AddTestFlightUserViewController(betaGroup: betaGroup)
         present(addUserViewController, asPopoverRelativeTo: sender.bounds, of: sender, preferredEdge: NSRectEdge.maxY, behavior: NSPopover.Behavior.semitransient)
     }
 }

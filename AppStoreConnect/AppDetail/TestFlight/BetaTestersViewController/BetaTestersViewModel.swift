@@ -11,6 +11,7 @@ import AppStoreConnect_Swift_SDK
 
 final class BetaTestersViewModel {
 
+    let betaGroup: BetaGroup?
     private let allBetaTesters: [BetaTester]
     private var filteredBetaTesters: [BetaTester]
 
@@ -22,7 +23,12 @@ final class BetaTestersViewModel {
         return filteredBetaTesters.count
     }
 
-    init(betaTesters: [BetaTester]) {
+    var canAddNewUser: Bool {
+        return betaGroup != nil
+    }
+
+    init(betaGroup: BetaGroup?, betaTesters: [BetaTester]) {
+        self.betaGroup = betaGroup
         self.allBetaTesters = betaTesters
         self.filteredBetaTesters = betaTesters
     }

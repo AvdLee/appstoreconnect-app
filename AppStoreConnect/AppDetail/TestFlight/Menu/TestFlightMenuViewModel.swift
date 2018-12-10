@@ -67,7 +67,9 @@ extension TestFlightMenuViewModel {
             }
         }
 
-        APIProvider.shared.request(APIEndpoint.betaGroups(filter: [ListBetaGroups.Filter.app([self.app.id])])) { [weak self] (result) in
+        let groupRelationships = [ListBetaGroups.Include.betaTesters]
+        let groupFilter = [ListBetaGroups.Filter.app([self.app.id])]
+        APIProvider.shared.request(APIEndpoint.betaGroups(filter: groupFilter, include: groupRelationships)) { [weak self] (result) in
             guard let groups = result.value else { return }
             self?.betaGroups = groups.data
             

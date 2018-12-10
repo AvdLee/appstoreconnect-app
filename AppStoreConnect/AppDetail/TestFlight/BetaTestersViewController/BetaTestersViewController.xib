@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="BetaTestersViewController" customModule="AppStoreConnect" customModuleProvider="target">
             <connections>
+                <outlet property="addNewUserButton" destination="QyN-0H-mGt" id="3kP-Jf-cNR"/>
                 <outlet property="searchTextField" destination="Nqj-UG-P1P" id="EbC-1h-vhA"/>
                 <outlet property="tableView" destination="5Q5-t4-64O" id="hN4-jF-kDI"/>
                 <outlet property="titleLabel" destination="dyo-Gz-eH7" id="4fu-6o-u7A"/>
@@ -141,7 +142,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QyN-0H-mGt">
+                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QyN-0H-mGt">
                     <rect key="frame" x="126" y="244" width="11" height="15"/>
                     <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="BlS-J0-XhC">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
