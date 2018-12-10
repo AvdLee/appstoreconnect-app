@@ -15,12 +15,7 @@ final class TestFlightMenuViewController: NSViewController {
 
     var viewModel: TestFlightMenuViewModel? {
         didSet {
-            viewModel?.update { [weak self] in
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                    self?.tableView.selectRowIndexes(IndexSet(integer: 0), byExtendingSelection: false)
-                }
-            }
+            viewModel?.update(using: self)
         }
     }
 
@@ -36,7 +31,7 @@ final class TestFlightMenuViewController: NSViewController {
 
 extension TestFlightMenuViewController: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 1
+        return viewModel?.numberOfItems() ?? 0
     }
 }
 
@@ -45,12 +40,30 @@ extension TestFlightMenuViewController: NSTableViewDelegate {
         guard let viewModel = viewModel else { return nil }
         var result: AppMenuTableCellView
         result = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as! AppMenuTableCellView
-        result.appNameLabel.stringValue = "All Testers (\(viewModel.totalNumberOfTesters))"
+        result.appNameLabel.stringValue = viewModel.titleOfItem(for: row)
         return result
     }
 
     func tableViewSelectionDidChange(_ notification: Notification) {
         guard let betaTesters = viewModel?.betaTesters else { return }
         didSelectBetaTesters?(betaTesters)
+    }
+}
+
+extension TestFlightMenuViewController: TestFlightMenuViewModelDelegate {
+    func didLoadAllGroups() {
+        tableView.reloadData()
+
+        if tableView.selectedRowIndexes.isEmpty {
+            tableView.selectRowIndexes(IndexSet(integer: 0), byExtendingSelection: false)
+        }
+    }
+
+    func didLoadAllUsers() {
+        tableView.reloadData()
+
+        if tableView.selectedRowIndexes.isEmpty {
+            tableView.selectRowIndexes(IndexSet(integer: 0), byExtendingSelection: false)
+        }
     }
 }
