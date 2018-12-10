@@ -18,6 +18,7 @@ final class TestFlightMenuViewController: NSViewController {
             viewModel?.update { [weak self] in
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
+                    self?.tableView.selectRowIndexes(IndexSet(integer: 0), byExtendingSelection: false)
                 }
             }
         }
@@ -28,7 +29,7 @@ final class TestFlightMenuViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        view.widthAnchor.constraint(equalToConstant: 220).isActive = true
     }
     
 }

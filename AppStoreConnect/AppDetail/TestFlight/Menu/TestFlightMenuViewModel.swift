@@ -26,7 +26,7 @@ final class TestFlightMenuViewModel {
 
     private func fetchTesters(with next: PagedDocumentLinks?, completion: @escaping () -> Void) {
         let filters = [ListBetaTesters.Filter.apps([app.id])]
-        let limit = [ListBetaTesters.Limit.betaTesters(50)]
+        let limit = [ListBetaTesters.Limit.betaTesters(200)]
         let sort = [ListBetaTesters.Sort.emailAscending]
         
         APIProvider.shared.request(.betaTesters(filter: filters, limit: limit, sort: sort, next: next)) { [weak self] (result) in
