@@ -12,11 +12,5 @@ import AppKit
 class AppMenuTableCellView: NSTableCellView {
 
     @IBOutlet weak var appNameLabel: NSTextField!
-
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-
-        // Drawing code here.
-    }
     
 }

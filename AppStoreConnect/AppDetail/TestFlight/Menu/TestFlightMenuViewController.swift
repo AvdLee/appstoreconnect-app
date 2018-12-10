@@ -15,27 +15,23 @@ final class TestFlightMenuViewController: NSViewController {
 
     var viewModel: TestFlightMenuViewModel? {
         didSet {
-            viewModel?.update { [weak self] in
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
-            }
+            viewModel?.update(using: self)
         }
     }
 
-    var didSelectBetaTesters: ((_ betaTesters: [BetaTester]) -> Void)?
+    var didSelectBetaGroup: ((_ betaGroup: BetaGroup?, _ betaTesters: [BetaTester]) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        view.widthAnchor.constraint(equalToConstant: 220).isActive = true
     }
     
 }
 
 extension TestFlightMenuViewController: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 1
+        return viewModel?.numberOfItems() ?? 0
     }
 }
 
@@ -44,12 +40,39 @@ extension TestFlightMenuViewController: NSTableViewDelegate {
         guard let viewModel = viewModel else { return nil }
         var result: AppMenuTableCellView
         result = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as! AppMenuTableCellView
-        result.appNameLabel.stringValue = "All Testers (\(viewModel.totalNumberOfTesters))"
+        result.appNameLabel.stringValue = viewModel.titleOfItem(for: row)
         return result
     }
 
     func tableViewSelectionDidChange(_ notification: Notification) {
-        guard let betaTesters = viewModel?.betaTesters else { return }
-        didSelectBetaTesters?(betaTesters)
+        guard let viewModel = viewModel else { return }
+        if tableView.selectedRow == 0 {
+            didSelectBetaGroup?(nil, viewModel.betaTesters)
+        } else {
+            let betaGroup = viewModel.betaGroups[tableView.selectedRow - 1]
+            let betaTesters = viewModel.betaTesters.filter { betaTester in
+                return betaGroup.relationships?.betaTesters?.data?.contains(where: { $0.id == betaTester.id }) == true
+            }
+
+            didSelectBetaGroup?(betaGroup, betaTesters)
+        }
+    }
+}
+
+extension TestFlightMenuViewController: TestFlightMenuViewModelDelegate {
+    func didLoadAllGroups() {
+        tableView.reloadData()
+
+        if tableView.selectedRowIndexes.isEmpty {
+            tableView.selectRowIndexes(IndexSet(integer: 0), byExtendingSelection: false)
+        }
+    }
+
+    func didLoadAllUsers() {
+        tableView.reloadData()
+
+        if tableView.selectedRowIndexes.isEmpty {
+            tableView.selectRowIndexes(IndexSet(integer: 0), byExtendingSelection: false)
+        }
     }
 }

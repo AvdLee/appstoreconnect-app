@@ -731,13 +731,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGe-HN-DzC">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="44" horizontalPageScroll="10" verticalLineScroll="44" verticalPageScroll="10" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="qGe-HN-DzC">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                                <clipView key="contentView" id="lvU-e4-E0J">
+                                <clipView key="contentView" drawsBackground="NO" id="lvU-e4-E0J">
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="32" headerView="GWb-9h-khO" viewBased="YES" id="KeU-Y7-MZ8">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="44" headerView="GWb-9h-khO" viewBased="YES" id="KeU-Y7-MZ8">
                                             <rect key="frame" x="0.0" y="0.0" width="450" height="235"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -757,13 +757,13 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="Y7w-0S-1Yd" customClass="AppMenuTableCellView" customModule="AppStoreConnect" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="450" height="105"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="450" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pYM-kK-ZL8" userLabel="App Name">
-                                                                    <rect key="frame" x="14" y="44" width="438" height="17"/>
+                                                                    <rect key="frame" x="14" y="11" width="438" height="18"/>
                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="dXQ-NG-aoG" userLabel="App Name">
-                                                                        <font key="font" metaFont="system"/>
+                                                                        <font key="font" metaFont="system" size="14"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
@@ -787,6 +787,7 @@
                                             </connections>
                                         </tableView>
                                     </subviews>
+                                    <nil key="backgroundColor"/>
                                 </clipView>
                                 <edgeInsets key="contentInsets" left="0.0" right="0.0" top="40" bottom="0.0"/>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Jwh-3d-iI9">
@@ -818,42 +819,11 @@
             </objects>
             <point key="canvasLocation" x="724" y="645"/>
         </scene>
-        <!--App Store-->
-        <scene sceneID="P69-yh-mGp">
-            <objects>
-                <viewController title="App Store" id="h5R-Qa-Rbt" customClass="AppDetailViewController" customModule="AppStoreConnect" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="S5W-Ug-s6e">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DXX-FQ-YUJ">
-                                <rect key="frame" x="33" y="248" width="37" height="17"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="tRa-g0-ocw">
-                                    <font key="font" usesAppearanceFont="YES"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="DXX-FQ-YUJ" firstAttribute="leading" secondItem="S5W-Ug-s6e" secondAttribute="leading" constant="35" id="6yH-T3-m3F"/>
-                            <constraint firstItem="DXX-FQ-YUJ" firstAttribute="top" secondItem="S5W-Ug-s6e" secondAttribute="top" constant="35" id="kY5-Ub-g0Y"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="appTitleLabel" destination="DXX-FQ-YUJ" id="tUT-Ju-4SQ"/>
-                    </connections>
-                </viewController>
-                <customObject id="6hc-R9-yMV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="766" y="1256"/>
-        </scene>
         <!--Tab View Controller-->
         <scene sceneID="6mP-3P-IPu">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" canPropagateSelectedChildViewControllerTitle="NO" id="GQm-HZ-cuu" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" tabStyle="unspecified" id="GQm-HZ-cuu" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem id="WUf-Ui-u1x"/>
                         <tabViewItem id="1BI-jY-EJN"/>
                     </tabViewItems>
                     <tabView key="tabView" drawsBackground="NO" type="noTabsNoBorder" id="ZAJ-Gp-yWi">
@@ -866,7 +836,6 @@
                     </tabView>
                     <connections>
                         <outlet property="tabView" destination="ZAJ-Gp-yWi" id="1gm-bf-naG"/>
-                        <segue destination="h5R-Qa-Rbt" kind="relationship" relationship="tabItems" id="aro-Um-HJ3"/>
                         <segue destination="ZaH-R7-Rul" kind="relationship" relationship="tabItems" id="eTr-ab-DCt"/>
                     </connections>
                 </tabViewController>
@@ -907,14 +876,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf8-5J-6WR">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="44" horizontalPageScroll="10" verticalLineScroll="44" verticalPageScroll="10" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="wf8-5J-6WR">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                 <clipView key="contentView" id="Gv4-RE-CJE">
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="32" headerView="pu4-B9-6BY" viewBased="YES" id="yz5-ns-dCw">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="275"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="44" headerView="pu4-B9-6BY" viewBased="YES" id="yz5-ns-dCw">
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="235"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -937,9 +906,9 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PTw-No-ZVV" userLabel="App Name">
-                                                                    <rect key="frame" x="14" y="77" width="438" height="17"/>
+                                                                    <rect key="frame" x="14" y="76" width="438" height="18"/>
                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="DdO-oc-OTu" userLabel="App Name">
-                                                                        <font key="font" metaFont="system"/>
+                                                                        <font key="font" metaFont="system" size="14"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
@@ -964,7 +933,7 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                <edgeInsets key="contentInsets" left="0.0" right="0.0" top="40" bottom="0.0"/>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="DCS-5z-gHP">
                                     <rect key="frame" x="1" y="243" width="164" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>

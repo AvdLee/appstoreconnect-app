@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		13E0C2641DA88C924AC63329 /* Pods_AppStoreConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82639D21BF68509540DD3BC /* Pods_AppStoreConnect.framework */; };
+		50AD15D921BEADD10049E1FE /* AddTestFlightUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD15D721BEADD10049E1FE /* AddTestFlightUserViewController.swift */; };
+		50AD15DA21BEADD10049E1FE /* AddTestFlightUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AD15D821BEADD10049E1FE /* AddTestFlightUserViewController.xib */; };
 		50EACD5921B17C7700AE60CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EACD5821B17C7700AE60CB /* AppDelegate.swift */; };
 		50EACD5D21B17C7900AE60CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50EACD5C21B17C7900AE60CB /* Assets.xcassets */; };
 		50EACD6021B17C7900AE60CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50EACD5E21B17C7900AE60CB /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		1FFCD194595EC034229699CE /* Pods-AppStoreConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreConnect.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppStoreConnect/Pods-AppStoreConnect.release.xcconfig"; sourceTree = "<group>"; };
 		34A89FCDE0E6FC9F5A96A110 /* Pods-AppStoreConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreConnectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppStoreConnectTests/Pods-AppStoreConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C2FAC4A432C140E6F920BC1 /* Pods-AppStoreConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreConnectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppStoreConnectTests/Pods-AppStoreConnectTests.release.xcconfig"; sourceTree = "<group>"; };
+		50AD15D721BEADD10049E1FE /* AddTestFlightUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTestFlightUserViewController.swift; sourceTree = "<group>"; };
+		50AD15D821BEADD10049E1FE /* AddTestFlightUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTestFlightUserViewController.xib; sourceTree = "<group>"; };
 		50EACD5521B17C7700AE60CB /* AppStoreConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EACD5821B17C7700AE60CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50EACD5C21B17C7900AE60CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 				AEA1A57F3E5DC8B71F446989 /* Pods_AppStoreConnectTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50AD15D621BEADB60049E1FE /* New User */ = {
+			isa = PBXGroup;
+			children = (
+				50AD15D721BEADD10049E1FE /* AddTestFlightUserViewController.swift */,
+				50AD15D821BEADD10049E1FE /* AddTestFlightUserViewController.xib */,
+			);
+			path = "New User";
 			sourceTree = "<group>";
 		};
 		50EACD4C21B17C7600AE60CB = {
@@ -189,6 +202,7 @@
 			children = (
 				50EACDA021B2FD9900AE60CB /* BetaTestersViewController */,
 				50EACDA421B2FD9900AE60CB /* Menu */,
+				50AD15D621BEADB60049E1FE /* New User */,
 				50EACD9221B1EF3200AE60CB /* TestFlightCoordinator.swift */,
 				50EACD9621B1F02500AE60CB /* TestFlightSplitViewController.swift */,
 			);
@@ -311,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50EACD5D21B17C7900AE60CB /* Assets.xcassets in Resources */,
+				50AD15DA21BEADD10049E1FE /* AddTestFlightUserViewController.xib in Resources */,
 				50EACD6021B17C7900AE60CB /* Main.storyboard in Resources */,
 				50EACDA921B2FD9A00AE60CB /* BetaTestersViewController.xib in Resources */,
 			);
@@ -424,6 +439,7 @@
 				50EACD9721B1F02500AE60CB /* TestFlightSplitViewController.swift in Sources */,
 				50EACDA821B2FD9A00AE60CB /* BetaTestersViewModel.swift in Sources */,
 				50EACD9321B1EF3200AE60CB /* TestFlightCoordinator.swift in Sources */,
+				50AD15D921BEADD10049E1FE /* AddTestFlightUserViewController.swift in Sources */,
 				50EACDAA21B2FD9A00AE60CB /* TestFlightMenuViewController.swift in Sources */,
 				50EACD8121B1AF0200AE60CB /* MenuCoordinator.swift in Sources */,
 				50EACD5921B17C7700AE60CB /* AppDelegate.swift in Sources */,
