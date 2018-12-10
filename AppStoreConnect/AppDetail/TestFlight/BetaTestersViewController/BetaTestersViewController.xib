@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="BetaTestersViewController" customModule="AppStoreConnect" customModuleProvider="target">
             <connections>
+                <outlet property="searchTextField" destination="Nqj-UG-P1P" id="EbC-1h-vhA"/>
                 <outlet property="tableView" destination="5Q5-t4-64O" id="hN4-jF-kDI"/>
                 <outlet property="titleLabel" destination="dyo-Gz-eH7" id="4fu-6o-u7A"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -28,6 +29,9 @@
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </searchFieldCell>
+                    <connections>
+                        <outlet property="delegate" destination="-2" id="pvx-oc-6ev"/>
+                    </connections>
                 </searchField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dyo-Gz-eH7">
                     <rect key="frame" x="14" y="242" width="102" height="19"/>

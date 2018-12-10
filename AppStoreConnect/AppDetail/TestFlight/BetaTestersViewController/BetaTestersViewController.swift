@@ -12,6 +12,7 @@ final class BetaTestersViewController: NSViewController {
 
     @IBOutlet weak var titleLabel: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var searchTextField: NSSearchField!
 
     let viewModel: BetaTestersViewModel
 
@@ -58,5 +59,13 @@ extension BetaTestersViewController: NSTableViewDataSource, NSTableViewDelegate 
         }
 
         return cell
+    }
+}
+
+extension BetaTestersViewController: NSTextFieldDelegate {
+    func controlTextDidChange(_ obj: Notification) {
+        viewModel.applyFilter(with: searchTextField.stringValue) {
+            tableView.reloadData()
+        }
     }
 }
